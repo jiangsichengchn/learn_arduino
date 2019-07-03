@@ -8,6 +8,7 @@ class Morse
     void dash();
     void c_space();
     void w_space();
+    void s_space();
   private:
     int _pin;
     int _dottime;
