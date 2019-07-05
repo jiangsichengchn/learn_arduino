@@ -26,6 +26,7 @@ processing
 
 ## 第二天
 Morse.h
+
 ```c
 #ifndef _MORSE_H
 #define _MORSE_H
@@ -43,7 +44,11 @@ class Morse
         int _dottime;
 };
 #endif /*_MORSE_H*/
+```
+
 Morse.cpp
+
+```c
 #include "Arduino.h"
 #include "Morse.h"
 Morse::Morse(int pin)
@@ -81,7 +86,11 @@ void Morse::s_space()
     digitalWrite(_pin,LOW);
     delay(_dottime*10);
 }
+```
+
 Mrose.ino
+
+```c
 #include <Morse.h>
 Morse morse(13);
 //定义一个数字存储每个字母的摩尔斯码
@@ -145,7 +154,9 @@ void loop()
 ```
 ## 第三天
 小车电路图
+
 ![](car/1.jpg)
+
 ```c
 void setup()
 {
@@ -219,9 +230,11 @@ void stop()
   digitalWrite(10, LOW);
 }
 ```
-数码管
+
+数码显像管电路图
+
 ![](CD4511-LED/CD4511.jpg)
-代码
+
 ```c
 void setup()
 {
@@ -280,8 +293,11 @@ void loop()
 }
 ```
 ## 第四天
-morse2
+
+morse2电路图
+
 ![](morse2/morse2.jpg)
+
 ```c
 #include "Arduino.h"
 int _pin;
@@ -378,8 +394,11 @@ void loop()
   }
 }
 ```
-不同数字显示
+
+不同数字显示电路图
+
 ![](4LED/4LED.jpg)
+
 ```c
 void setup()
 {
@@ -437,6 +456,7 @@ void loop()
   }
 }
 ```
+
 ## 总结
 - 经过四天的学习，对arduino开发有了一定的了解，嵌入式开发是计科的四个方向之一，也是唯一一个硬件方向，由于种种原因不太热门。但是经过实践发现，相较软件方向，硬件需求更多的实物操作，更容易得到可视化的明显的成果，易获得成就感。这也是为什么国外很多小孩会进行这方面的学习，对儿童来说趣味性是学习的重要影响因素，而编程语言的学习，即使是python这样方便简单容易做一些小东西的语言，也缺乏趣味性。相反，arduino等的学习则类似于小玩具，很容易激发兴趣，也许更为适合作为儿童接触编程的途径。浙江新高考政策将编程加入高考，前两年使用VB，第三年开始使用python教学。根据我自身学习的经验，很多学生学习编程较为艰难，编程题也缺乏实用性，大多数情况是为出题而出题，大量在实际使用中毫无意义的代码，为了拿分一遍遍的刷题，本质与数学物理无益。三年学习，全部内容不比大一C语言多多少，即便这样，也有很多人会放弃编程题的分数，花费精力在其他题型上。如果使用arduino这样主要实践的方式作为学习工具，也许才更符合新高考改革的初衷。
 - 第一天初步了解了arduino的几个软件和基本使用流程以及liunx系统。Github，对专业发展方向有了更深一步的了解。Github的使用是学习编程重要的一环，无论是学习别人的代码还是分享自己的代码，或者是加入开源项目，对自身发展都有很大好处。
